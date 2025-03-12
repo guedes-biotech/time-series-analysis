@@ -33,6 +33,7 @@ with open('Results.csv', 'w') as file:
     writer.writerows([
         ['Média', mean(log_retornos)],
         ['Variância Amostral', variance(log_retornos)],
+        ['Coef. assimetria', coef_assim(log_retornos, 'quartil')],
         ['Curtose', kurtosis(log_retornos, bias=False)],
         ['Máximo', max(log_retornos)],
         ['Mínimo', min(log_retornos)],
